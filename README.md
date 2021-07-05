@@ -1,2 +1,2 @@
 # BaseAndroidArchitecture
-Purpose for this base architectural project is to load it with all latest components and libraries So it become reference for all kind of Android projects
+The purpose of this base architectural project is to load it with all the latest components and libraries, So it becomes a reference for all kinds of Android projects
