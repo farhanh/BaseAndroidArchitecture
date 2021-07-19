@@ -11,11 +11,12 @@ import org.koin.core.inject
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
+import javax.inject.Inject
 
 /**
  * Created by Farhan on 10,March,2020
  */
-class HttpClientFactory (private val baseUrl: String): IHttpFactory<IServiceDefinition>, KoinComponent {
+class HttpClientFactory (private val baseUrl: String): IHttpFactory<IServiceDefinition> {
 
     companion object {
         private const val TAG = "NoteHttpClientFactory"
@@ -24,7 +25,8 @@ class HttpClientFactory (private val baseUrl: String): IHttpFactory<IServiceDefi
         private const val OK_HTTP_CONTENT_TYPE = "application/json"
     }
 
-    private val logger: ILogger by inject()
+    @Inject
+    lateinit var logger: ILogger
 
     override fun create(): IServiceDefinition {
 

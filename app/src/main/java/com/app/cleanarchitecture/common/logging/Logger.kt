@@ -1,6 +1,7 @@
 package com.sampleapp.common.logging
 
 import timber.log.Timber
+import javax.inject.Inject
 
 /**
  * TODO: ideally we shouldn't need to specify the tag for Timber.
@@ -9,7 +10,8 @@ import timber.log.Timber
  * https://github.com/JakeWharton/timber/pull/314
  **/
 @Suppress("SpreadOperator")
-class Logger : ILogger {
+class Logger
+@Inject constructor() : ILogger {
     override fun v(tag: String, message: String, vararg args: Any) {
         Timber.tag(tag)
         Timber.v(message, *args)
@@ -40,7 +42,7 @@ class Logger : ILogger {
         Timber.d(t)
     }
 
-    override fun i(tag: String, message: String, vararg args: Any) {
+    override fun i(tag: String, message: String, vararg args: Any?) {
         Timber.tag(tag)
         Timber.i(message, *args)
     }

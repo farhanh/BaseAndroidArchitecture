@@ -20,7 +20,7 @@ interface ILogger {
     fun d(tag: String, t: Throwable)
 
     /** Log an info message with optional format args.  */
-    fun i(tag: String, message: String, vararg args: Any)
+    fun i(tag: String, message: String, vararg args: Any?)
 
     /** Log an info exception and a message with optional format args.  */
     fun i(tag: String, t: Throwable, message: String, vararg args: Any)

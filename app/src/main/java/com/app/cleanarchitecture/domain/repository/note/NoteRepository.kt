@@ -4,11 +4,16 @@ import com.app.cleanarchitecture.domain.datasource.Result
 import com.app.cleanarchitecture.domain.datasource.note.IRemoteNoteDataSource
 import com.app.cleanarchitecture.domain.model.note.Note
 import com.sampleapp.common.logging.ILogger
+import javax.inject.Inject
 
 /**
  * Created by Farhan on 11,March,2020
  */
-class NoteRepository(private val remoteNoteSource:IRemoteNoteDataSource, private val logger: ILogger): INoteRepository {
+class NoteRepository
+    @Inject constructor(private val remoteNoteSource:IRemoteNoteDataSource): INoteRepository {
+
+    @Inject
+    lateinit var logger: ILogger
 
     companion object {
         private val TAG = NoteRepository.javaClass.name
