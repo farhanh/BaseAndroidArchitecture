@@ -85,4 +85,4 @@ object AnalyticsModule {
 
 
 ### Note
-I have just described the pattern here for quick usage, For further clarifications about Annotations you must checkout the [Hilt Modules Documentation](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules)
+I have just described the pattern here for quick usage, For further clarifications about Annotations you must checkout the [Hilt Android Documentation](https://developer.android.com/training/dependency-injection/hilt-android#kts)
