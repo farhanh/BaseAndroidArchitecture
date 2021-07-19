@@ -42,7 +42,7 @@ There is one limitation, you cannot contructor-inject an interface or class whic
 #### Interface Injection
 For instance, If I have an interface ILogger and want to inject then there are 2 things I have to do,
  
-1- Create abstract class which contain abstract funtion to return the interface:
+1- Create abstract class which contains abstract function to return the interface:
 ```
 @Module
 @InstallIn(SingletonComponent::class)
@@ -59,7 +59,7 @@ class LoggerImpl @Inject contructor() : ILogger {
 ...
 }
 ```
-Now Logger can be used anywhere througout the Application since it has the SingletonComponent Scope:
+Now Logger can be used anywhere throughout the Application since it has the SingletonComponent Scope:
 ```
 @Inject
     lateinit var logger: ILogger
