@@ -1,5 +1,6 @@
 package com.app.cleanarchitecture.api.network
 
+import com.app.cleanarchitecture.BuildConfig
 import com.app.cleanarchitecture.api.httpclients.HttpClientFactory
 import com.app.cleanarchitecture.api.service.INoteService
 import com.app.cleanarchitecture.api.service.NoteService
@@ -11,10 +12,8 @@ import javax.inject.Inject
 class NetworkLayer
 @Inject constructor() : INetworkLayer {
 
-    val baseUrl: String = "google.com"
-
     val noteServiceInstance: INoteService by lazy {
-        NoteService(HttpClientFactory(baseUrl))
+        NoteService(HttpClientFactory(BuildConfig.BASE_URL))
     }
 
     override fun getNoteService(): INoteService {

@@ -1,6 +1,6 @@
 package com.sampleapp.api.utils
 
-import com.sampleapp.common.logging.ILogger
+import com.app.cleanarchitecture.common.logging.ILogger
 import okhttp3.ResponseBody
 import org.koin.core.KoinComponent
 import org.koin.core.inject

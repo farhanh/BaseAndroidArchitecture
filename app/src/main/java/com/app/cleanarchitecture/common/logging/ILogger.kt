@@ -1,4 +1,4 @@
-package com.sampleapp.common.logging
+package com.app.cleanarchitecture.common.logging
 
 interface ILogger {
     /** Log a verbose message with optional format args.  */

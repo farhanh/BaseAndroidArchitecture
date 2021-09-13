@@ -6,12 +6,9 @@ import com.app.cleanarchitecture.domain.datasource.note.IRemoteNoteDataSource
 import com.app.cleanarchitecture.domain.datasource.note.RemoteNoteDataSource
 import com.app.cleanarchitecture.domain.repository.note.INoteRepository
 import com.app.cleanarchitecture.domain.repository.note.NoteRepository
-import com.sampleapp.common.logging.ILogger
-import com.sampleapp.common.logging.Logger
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.components.SingletonComponent
 
 @Module

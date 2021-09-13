@@ -1,9 +1,10 @@
 package com.app.cleanarchitecture.domain.repository.note
 
-import com.app.cleanarchitecture.domain.datasource.Result
+import com.app.cleanarchitecture.domain.datasource.ResultState
 import com.app.cleanarchitecture.domain.datasource.note.IRemoteNoteDataSource
 import com.app.cleanarchitecture.domain.model.note.Note
-import com.sampleapp.common.logging.ILogger
+import com.app.cleanarchitecture.common.logging.ILogger
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 /**
@@ -19,7 +20,7 @@ class NoteRepository
         private val TAG = NoteRepository.javaClass.name
     }
 
-    override suspend fun getNoteList(): Result<List<Note>> {
+    override suspend fun getNoteList(): Flow<ResultState<List<Note>>> {
         logger.i(TAG, "getNoteList")
         return remoteNoteSource.getNotes()
     }

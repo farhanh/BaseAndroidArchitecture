@@ -1,16 +1,15 @@
 package com.app.cleanarchitecture.api.httpclients
 
 import com.app.cleanarchitecture.api.endpoints.IServiceDefinition
-import com.sampleapp.common.logging.ILogger
+import com.app.cleanarchitecture.common.logging.ILogger
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
-import org.koin.core.KoinComponent
-import org.koin.core.inject
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
+import timber.log.Timber
 import javax.inject.Inject
 
 /**

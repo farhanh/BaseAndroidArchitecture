@@ -1,5 +1,6 @@
 package com.sampleapp.common.logging
 
+import com.app.cleanarchitecture.common.logging.ILogger
 import timber.log.Timber
 import javax.inject.Inject
 
