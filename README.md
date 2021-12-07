@@ -45,6 +45,11 @@ Here business logic is completely decoupled from the UI. It makes the code very 
 * Live Data
 * Room
 
+### 3.2.1.1 MVI Pattern with Kotlin Flow
+
+There is a little bit change in approach how UI communicates with the ViewModel, instead directly calling its methods or properties, there are States and Events which makes the code more readable and structured. Please checkout MVI demonstration in my branch [MVI_Kotlin_Flow](https://github.com/farhanh/BaseAndroidArchitecture/tree/MVI_Kotlin_Flow) of this repository
+
+
 ### 3.2.2 Folder Structure
 
 View related classes should be organized as a packe-per-feature. This means, all the
@@ -82,7 +87,7 @@ Retrofit will cover the network layer for fast and easy operations on fetching a
 
 ### 3.4 Dependency Injection
 
-Koin will be used because it is a lightweight dependency injection framework that uses Kotlin’s DSLs to lazily resolve your dependency graph at runtime.
+Koin is used in the base branch that uses Kotlin’s DSLs to lazily resolve your dependency graph at runtime. Please checkout Hilt demonstration in my branch [Hilt](https://github.com/farhanh/BaseAndroidArchitecture/tree/Hilt) of this repository
 
 ### 3.5 Crash Reports
 
